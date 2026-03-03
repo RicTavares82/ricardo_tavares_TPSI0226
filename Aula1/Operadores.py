@@ -1,4 +1,4 @@
-# Operadores aritméticos (atribuição)
+# Operadores aritméticos (Operadores de atribuição)
 
 # soma + , subtração - , divisão / , multiplicação * , mode % (resto da divisão), potência **
 
