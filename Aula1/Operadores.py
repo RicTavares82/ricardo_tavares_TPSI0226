@@ -2,21 +2,21 @@
 
 # soma + , subtração - , divisão / , multiplicação * , mode % (resto da divisão), potência **
 
-total=0
-num1=0
-num2=0
+total = 0
+num1 = 0
+num2 = 0
 
-#input de valores
+# input de valores
 num1 = int(input("Digite o primeiro número: "))
 num2 = int(input("Digite o segundo número: "))
 
-#prmeira forma de concatenar string com variáveis
+# prmeira forma de concatenar string com variáveis
 print("A soma é: " + str(num1 + num2))
 
-#segunda forma de concatenar string com variáveis
+# segunda forma de concatenar string com variáveis
 print("A soma é: ", num1 + num2)
 
-#terceira forma de concatenar string com variáveis
+# terceira forma de concatenar string com variáveis
 print(f"A soma é: {num1 + num2}")
 
 # quarta forma de concatenar string com variáveis
@@ -36,12 +36,12 @@ print("A divisão é: ", total)
 total = num1 % num2
 print("O resto da divisão é: ", total)
 
-total = num1 ** num2
+total = num1**num2
 print("A potência é: ", total)
 
 "----------------------------------------"
 
-#operadores de comparação
+# operadores de comparação
 
 # igualdade == , diferente != , maior que > , menor que < , maior ou igual >= , menor ou igual <=
 
@@ -68,7 +68,7 @@ if num1 != num2:
 
 "----------------------------------------"
 
-#operadores de decisão
+# operadores de decisão
 
 # if , elif , else
 
@@ -92,24 +92,43 @@ val1 = 2
 val2 = 3
 val3 = 4
 
-if val1>val2 and val2>val3:
+if val1 > val2 and val2 > val3:
     print("val1 é o maior , val3 é o menor")
-elif val1>val3 and val3>val2:
+elif val1 > val3 and val3 > val2:
     print("val1 é o maior , val2 é o menor")
 
 # continuar o codigo
-elif val2>val1 and val1>val3:
+elif val2 > val1 and val1 > val3:
     print("val2 é o maior , val3 é o menor")
-elif val2>val3 and val3>val1:
+elif val2 > val3 and val3 > val1:
     print("val2 é o maior , val1 é o menor")
-elif val3>val1 and val1>val2:
+elif val3 > val1 and val1 > val2:
     print("val3 é o maior , val2 é o menor")
 else:
     print("val3 é o maior , val1 é o menor")
 
 
-#outra forma de encontrar o maior e o menor
+# outra forma de encontrar o maior e o menor
 maior = max(val1, val2, val3)
 menor = min(val1, val2, val3)
 
 print(f"{maior} é o maior, {menor} é o menor")
+
+
+# estrutura de decisão usando match case (switch case em C#)
+opc = ""
+
+print("prima 1 para bom dia")
+print("prima 2 para boa noite")
+print("prima 3 para sair")
+opc = input("escolha opçao")
+
+match opc:
+    case "1":
+        print("bom dia")
+    case "2":
+        print("boa noite")
+    case "3":
+        print("sair do programa")
+    case _:
+        print("Errou opçao")
