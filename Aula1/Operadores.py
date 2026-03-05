@@ -114,7 +114,6 @@ menor = min(val1, val2, val3)
 
 print(f"{maior} é o maior, {menor} é o menor")
 
-
 # estrutura de decisão usando match case (switch case em C#)
 opc = ""
 
