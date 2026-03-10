@@ -7,12 +7,25 @@ conteudo = input("Digite o conteudo ((deixar vazio)/preenchido): ").lower()
 # Criar o dicionário com os valores digitados
 requisicao = {"metodo": metodo, "conteudo": conteudo}
 
-# Lógica de verificação
-if requisicao["metodo"] == "post" and requisicao["conteudo"] != "":
-    print("Requisição POST com dados válidos")
-elif requisicao["metodo"] == "post" and requisicao["conteudo"] == "":
-    print("Requisição POST sem dados")
-elif requisicao["metodo"] == "get":
-    print("Requisição GET recebida")
-else:
-    print("Método não suportado")
+# # Lógica de verificação
+# if requisicao["metodo"] == "post" and requisicao["conteudo"] != "":
+#     print("Requisição POST com dados válidos")
+# elif requisicao["metodo"] == "post" and requisicao["conteudo"] == "":
+#     print("Requisição POST sem dados")
+# elif requisicao["metodo"] == "get":
+#     print("Requisição GET recebida")
+# else:
+#     print("Método não suportado")
+
+# -------------------------
+# outra forma de apresentar o mesmo resultado
+
+match requisicao:
+    case {"metodo": "post", "conteudo": c} if c != "":
+        print("Requisição POST com dados válidos")
+    case {"metodo": "post", "conteudo": ""}:
+        print("Requisição POST sem dados")
+    case {"metodo": "get"}:
+        print("Requisição GET recebida")
+    case _:
+        print("Método não suportado")

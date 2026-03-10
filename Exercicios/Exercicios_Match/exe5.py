@@ -1,8 +1,7 @@
 # Exercício 5
 
-mensagem = input(
-    "Escreva a sua mensagem: "
-).lower()  # .lower() para passar a maiúsculas
+mensagem = input("Escreva a sua mensagem: ").lower()
+# .lower() para passar a maiúsculas
 
 # Saudação (Comparação exata)
 if mensagem == "olá" or mensagem == "bom dia":
@@ -18,16 +17,16 @@ else:
     print("Mensagem genérica")
 
 print()
-# -----------
+# ----------------
 # outra forma de apresentar o resultado
 text = input("Escreva a sua mensagem: ").lower()
 
 match text:
-    case _ if "ola" in text or "bom dia" in text:
+    case _ if "olá" in text or "bom dia" in text or "oi" in text:
         print("Saudação")
-    case text.endswith("?"):
+    case _ if "?" in text:
         print("Pergunta")
-    case _ if "tchau" in text or "adeus" in text():
+    case _ if "tchau" in text or "adeus" in text:
         print("Despedida")
     case _:
         print("Mensagem genérica")
