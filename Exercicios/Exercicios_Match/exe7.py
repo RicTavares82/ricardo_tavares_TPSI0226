@@ -11,11 +11,22 @@ else:
 luxo = {"Categoria": categoria, "Preço": preco}
 
 # Lógica de verificação
-if luxo["Categoria"] == "eletrônico" and luxo["Preço"] > 1000:
-    print("Produto de luxo")
-elif luxo["Categoria"] == "eletrônico" and luxo["Preço"] <= 1000:
-    print("Produto comum")
-elif luxo["Categoria"] == "alimento":
-    print("Produto alimentar")
-else:
-    print("Categoria desconhecida")
+# if luxo["Categoria"] == "eletronico" or "eletrônico" and luxo["Preço"] > 1000:
+#     print("Produto de luxo")
+# elif luxo["Categoria"] == "eletronico" or "eletrônico" and luxo["Preço"] <= 1000:
+#     print("Produto comum")
+# elif luxo["Categoria"] == "alimento":
+#     print("Produto alimentar")
+# else:
+#     print("Categoria desconhecida")
+
+
+match categoria:
+    case {"Categoria": "eletronico", "Preço": preço}:
+        print("Produto de luxo")
+    case {"tipo": "venda", "valor": valor}:
+        print("Produto comum")
+    case _ if ["Categoria"] == "alimento":
+        print("Produto alimentar")
+    case _:
+        print("Categoria desconhecida")

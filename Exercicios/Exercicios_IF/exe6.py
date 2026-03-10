@@ -1,8 +1,8 @@
 # Exercício 6
 
-10% para compras até 200,00€.
-15% para compras entre 200,01€ e 500,00€.
-20% para compras acima de 500,00€.
+# 10% para compras até 200,00€.
+# 15% para compras entre 200,01€ e 500,00€.
+# 20% para compras acima de 500,00€.
 
 nome = input("Cliente: ")
 compra = int(input("Valor da Compra: "))

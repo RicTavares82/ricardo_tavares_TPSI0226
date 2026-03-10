@@ -11,6 +11,7 @@ maior = max(notas)
 print("a nota maior:", maior)
 print("a nota menor:", menor)
 
+print()
 media = sum(notas) / 10
 print(f"a média é:", media)
 
@@ -23,8 +24,10 @@ print(f"existem {conta} pessoas com nota igual ou superior á média.")
 # mostrar as notas iguais ou superiores á media
 for nota in notas:
     if nota >= media:
-        print(f"Esta nota é superior ou igual á média: {nota}")
+        print(f" {nota} é uma nota superior ou igual á média: {media}")
 
+print()
+# ----------------
 # outra forma de apresentar os mesmo resultados
 nota1 = 13
 nota2 = 5

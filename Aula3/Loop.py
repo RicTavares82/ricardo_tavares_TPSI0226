@@ -6,6 +6,8 @@ nomes = ["João", "Pedro", "Antonio"]
 for nome in nomes:
     print(nome)
 
+# -------------------
+
 # função range
 
 print()
@@ -16,32 +18,37 @@ print()
 for i in range(3):
     print(nomes[i])
 
+# -------------------
+
 # len
 print()
 for i in range(len(nomes)):
     print(nomes[i])
 
 
+# -------------------
+
 # while  <--- controlado por uma expressao ex: Val1 < Val2
-print()
-# tamanho da lista 3
-i = 0
-while i < len(nomes):  # começa em 0 e acaba em 2
-    i += 1
 
 print()
 # outra forma
 while i <= 3:  # começa em 0 e acaba em 2
     i += 1
 
-print()
 # outra forma
+print()
+i = 0
+while i < len(nomes):  # começa em 0 e acaba no tamanho da lista
+    i += 1
+
+# outra forma
+print()
 ifinal = len(nomes)
-while i <= ifinal:  # começa em 0 e acaba em 2
+while i <= ifinal:  # começa em 0 e acaba no tamanho da lista declarada em ifinal
     i += 1
 
 
-# ------------------
+# --------------------
 
 # flag True
 print()
