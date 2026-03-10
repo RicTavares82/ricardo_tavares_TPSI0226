@@ -9,6 +9,12 @@ while repet == "sim":
         # pequena validação da inserção
         print("Escolha a jogada => pedra, papel ou tesoura")
         j1 = input("Jogador 1: ")
+
+    import os
+
+    # input("Prime Enter para limpar...")
+    os.system("cls")
+
     print()
     while j2 != "pedra" and j2 != "papel" and j2 != "tesoura":
         # pequena validação da inserção
@@ -33,6 +39,6 @@ while repet == "sim":
             print("Erro: Jogada inválida!")
     print()
     print("Quer repetir o jogo?")
-    repet = input("(s = sim / n = não) ")
+    repet = input("( sim / não ): ")
 print()
 print("Até breve")
