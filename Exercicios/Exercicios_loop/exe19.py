@@ -5,13 +5,13 @@
 #     1+2=3
 #         2+3=5
 
-resultado_anterior = 0
-atual = 1
-# soma = 0
-for i in range(60):
+a = 1
+b = 1
+resul = a + b
 
-    if i > 1:
-        resultado_anterior = atual + resultado_anterior
-        atual = resultado_anterior
-        print(f"{resultado_anterior}")
-        print
+for i in range(60):
+    print(f"Conta numero {i+1} é {a} + {b} = {resul} \n")
+
+    a = b
+    b = resul
+    resul = a + b

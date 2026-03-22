@@ -1,7 +1,7 @@
 # Exercício 6: Crie um algoritmo que mostre os 10 primeiros números primos.
 
-contaPri = 0  # Contador de quantos números primos já encontrámos
-i = 2  # Começamos no 2 (o primeiro número primo)
+contaPri = 0  # Contador de quantos números primos encontrámos
+i = 2
 
 while contaPri < 10:
     divisores = 0
@@ -14,6 +14,6 @@ while contaPri < 10:
     # Se encontrou exatamente 2 divisores, é primo
     if divisores == 2:
         print(f"{i} é primo.", end=" | ")
-        contaPri += 1  # Encontrámos mais um primo!
+        contaPri += 1
 
-    i += 1  # Passamos para o próximo número para testar
+    i += 1

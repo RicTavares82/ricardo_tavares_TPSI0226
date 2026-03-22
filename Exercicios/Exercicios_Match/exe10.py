@@ -39,6 +39,6 @@ while repet == "sim":
             print("Erro: Jogada inválida!")
     print()
     print("Quer repetir o jogo?")
-    repet = input("( sim / não ): ")
+    repet = input("( s / n ): ")
 print()
 print("Até breve")
