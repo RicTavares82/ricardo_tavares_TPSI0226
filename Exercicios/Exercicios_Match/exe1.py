@@ -17,7 +17,6 @@ elif dia == "sexta":
 else:
     print("Esse dia não existe!")
 
-
 print()
 # ---------------
 # outra forma de mostrar o resultado
