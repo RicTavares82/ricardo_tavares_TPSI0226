@@ -22,7 +22,7 @@ while repet == "sim":
         j2 = input("Jogador 2: ")
 
     print()
-    # cria um match nas duas variaveis/valores (usado um tuplo)
+    # usado um tuplo
     match (j1, j2):
         case _ if j1 == j2:
             # _ isto é para o case aceitar qualquer coisa. Neste caso, aceitar dentro do (j1, j2)

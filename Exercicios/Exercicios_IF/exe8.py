@@ -13,7 +13,7 @@ print("a nota menor:", menor)
 
 print()
 media = sum(notas) / 10
-print(f"a média é:", media)
+print("a média é: ", media)
 
 conta = 0
 for i in range(10):
