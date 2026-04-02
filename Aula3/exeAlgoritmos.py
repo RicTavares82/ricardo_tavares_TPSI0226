@@ -24,13 +24,13 @@ def delete(nomesd: list):
 
 def procurar(nomesp: list):
     nome_procurado = input("Insira o nome para procurar: ")
-    indices_encontrados = []  # Criamos uma lista vazia para guardar os resultados
+    indices_encontrados = []
 
     for i in range(len(nomesp)):
         if nomesp[i] == nome_procurado:
-            indices_encontrados.append(i)  # Guarda a posição e continua o loop
+            indices_encontrados.append(i)
 
-    return indices_encontrados  # Devolve a lista (que pode estar vazia [])
+    return indices_encontrados
 
 
 while True:
@@ -38,7 +38,7 @@ while True:
     print("2 - listar nomes")
     print("3 - delete nome")
     print("4 - procurar nome")
-    print("5 - sair")
+    print("6 - sair")
     opt = input("Escolha Opção: ")
     match opt:
         case "1":
@@ -46,12 +46,10 @@ while True:
         case "2":
             listar(nomes)
         case "3":
-            delete(nomes)
+            # delete(nomes)
+            pass
         case "4":
-            procurar(nomes)
-            # print aqui os valores e posiçoes
-        case "5":
-
+            # procurar(nomes)
             posicoes = procurar(nomes)
             if len(posicoes) > 0:
                 print(f"\nForam encontrados {len(posicoes)} clientes com esse nome:")
@@ -60,7 +58,9 @@ while True:
                     print(" Nome: ", nomes)
             else:
                 print("Nenhum cliente encontrado com esse nome.")
-
+            # print aqui os valores e posiçoes
+        case "5":
+            break
         case "6":
             print("\nfim do programa")
             break
