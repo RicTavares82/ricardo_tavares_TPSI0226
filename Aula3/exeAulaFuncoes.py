@@ -31,7 +31,7 @@ while True:
     print("2 - listar nomes")
     print("3 - delete nome")
     print("4 - procurar nome")
-    print("6 - sair")
+    print("5 - sair")
     opt = input("Escolha Opção: ")
     match opt:
         case "1":
@@ -63,9 +63,6 @@ while True:
             else:
                 print("\nNenhum nome encontrado.")
         case "5":
-            break
-        case "6":
             print("\nfim do programa")
-            break
         case _:
             print("\nnao escolheu a opçao certa")
