@@ -4,3 +4,17 @@
 # "hoje é um bom dia e hoje o sol está a brilhar"
 # Resultado esperado:
 # {'hoje': 2, 'é': 1, 'um': 1, 'bom': 1, 'dia': 1, 'e': 1, 'o': 1, 'sol': 1, 'está': 1, 'a': 1, 'brilhar': 1}
+
+frase = input("Escreva uma frase: ").lower()
+
+palavras = frase.split()
+
+dicionario = {}
+
+for contaP in palavras:
+    if contaP in dicionario:
+        dicionario[contaP] += 1
+    else:
+        dicionario[contaP] = 1
+
+print(dicionario)

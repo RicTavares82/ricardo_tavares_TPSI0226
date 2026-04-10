@@ -9,3 +9,12 @@
 # João: 8.0
 # Maria: 9.0
 # Ana: 7.0
+
+notas = {"João": [7, 8, 9], "Maria": [10, 9, 8], "Ana": [6, 7, 8]}
+notasMedia = {}
+
+for nota in notas.keys():
+    media = sum(notas[nota]) / len(notas[nota])
+    notasMedia[nota] = media
+
+    print(nota, notasMedia[nota])

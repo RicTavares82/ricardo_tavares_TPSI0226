@@ -6,5 +6,5 @@
 utilizador = {"nome": "Carlos", "idade": 28}
 
 
-if "nome" not in utilizador:
+if "email" not in utilizador:
     print("Email não encontrado")
