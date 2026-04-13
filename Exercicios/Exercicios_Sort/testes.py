@@ -202,18 +202,221 @@
 # ------
 
 
-def mult(x):
-    var = 7
-    return x * var
+# def mult(x):
+#     var = 7
+#     return x * var
 
 
-var = 2
-print(mult(7))  # saídas: 49
+# var = 2
+# print(mult(7))  # saídas: 49
 
 
-def multi(x):
-    var = 2
-    return x * var
+# def multi(x):
+#     var = 2
+#     return x * var
 
 
-print(multi(7))  # saídas: 35
+# print(multi(7))  # saídas: 35
+
+# ------
+
+
+# def is_a_triangle(a, b, c):
+#     if a + b <= c:
+#         return False
+#     if b + c <= a:
+#         return False
+#     if c + a <= b:
+#         return False
+#     return True
+
+
+# print(is_a_triangle(1, 1, 1))
+# print(is_a_triangle(1, 1, 3))
+
+# ----
+
+
+# def is_a_triangle(a, b, c):
+#     return a + b > c and b + c > a and c + a > b
+
+
+# print(is_a_triangle(1, 1, 1))
+# print(is_a_triangle(1, 1, 3))
+
+# -----------
+
+
+# def is_a_triangle(a, b, c):
+#     return a + b > c and b + c > a and c + a > b
+
+
+# a = float(input("Digite o primeiro lado's comprimento: "))
+# b = float(input("Entre no segundo lado's comprimento: "))
+# c = float(input("Entre no terceiro lado's comprimento: "))
+
+# if is_a_triangle(a, b, c):
+#     print("Sim, pode ser um triângulo.")
+# else:
+#     print("Não, não pode ser um triângulo.")
+
+
+# -----
+
+# def is_a_triangle(a, b, c):
+#     return a + b > c and b + c > a and c + a > b
+
+
+# def is_a_right_triangle(a, b, c):
+#     if not is_a_triangle(a, b, c):
+#         return False
+#     if c > a and c > b:
+#         return c ** 2 == a ** 2 + b ** 2 if a > b and a > c:
+
+#     if a > b and a > c:
+#         return a ** 2 == b ** 2 + c ** 2
+# print(is_a_right_triangle(5, 3, 4))
+# print(is_a_right_triangle(1, 3, 4))
+
+# ----
+
+
+# def factorial_function(n):
+#     if n < 0:
+#         return None
+#     if n < 2:
+#         return 1
+
+#     product = 1
+#     for i in range(2, n + 1):
+#         product *= i
+#     return product
+
+
+# for n in range(1, 6):  # testando
+#     print(n, factorial_function(n))
+
+# ----
+
+
+# def fib(n):
+#     if n < 1:
+#         return None
+#     if n < 3:
+#         return 1
+
+#     elem_1 = elem_2 = 1
+#     the_sum = 0
+#     for i in range(3, n + 1):
+#         the_sum = elem_1 + elem_2
+#         elem_1, elem_2 = elem_2, the_sum
+#     return the_sum
+
+
+# for n in range(1, 10):  # testando
+#     print(n, "->", fib(n))
+
+
+# ----
+
+
+# def factorial_function(n):
+#     if n < 0:
+#         return None
+#     if n < 2:
+#         return 1
+#     return n * factorial_function(n - 1)
+
+
+# for n in range(1, 6):  # testando
+#     print(n, factorial_function(n))
+
+# ---
+
+# my_tuple = (1, 10, 100, 1000)
+
+# print(my_tuple[0])
+# print(my_tuple[-1])
+# print(my_tuple[1:])
+# print(my_tuple[:-2])
+
+# for elem in my_tuple:
+#     print(elem)
+
+# ---
+
+# my_lista = [1, 10, 100]
+
+# t1 = my_lista + [1000, 10000]
+# t2 = my_lista * 3
+
+# print(len(t2))
+# print(t1)
+# print(t2)
+# print(10 in my_lista)
+# print(-10 not in my_lista)
+
+# ----
+
+# var = 123
+
+# t1 = (1,)
+# t2 = (2,)
+# t3 = (3, var)
+
+# t1, t2, t3 = t2, t3, t1
+
+# print(t1, t2, t3)
+
+
+# ---
+
+# school_class = {}
+
+# while True:
+#     name = input("Digite o nome do aluno: ")
+#     if name == "":
+#         break
+#     score = int(input("Insira a pontuação do aluno (0-10): "))
+#     if score not in range(0, 11):
+#         break
+
+#     if name in school_class:
+#         school_class[name] += [score]
+#     else:
+#         school_class[name] = [score]
+
+# for name in sorted(school_class.keys()):
+#     adding = 0
+#     counter = 0
+#     for score in school_class[name]:
+#         adding += score
+#         counter += 1
+#     print(name, ":", adding / counter)
+
+# # ----
+
+# tup = (
+#     1,
+#     2,
+#     3,
+# )
+# my_list = list(tup)
+# print(my_list)  # saídas:
+
+# -----
+
+# try:
+#     value= int (input('Insira um número natural:')) 
+#     print('O recíproco de', value, 'é', 1 / value) 
+# except:0
+#     print('Não sei o que fazer.')
+
+#----
+try:
+    value = int(input('Digite um número natural: '))
+    print('O recíproco de', value, 'é', 1/value)
+except ValueError:
+    print('Eu não sei o que fazer.') 
+except ZeroDivisionError:
+    print('A divisão por zero não é permitida em nosso Universo.') 
