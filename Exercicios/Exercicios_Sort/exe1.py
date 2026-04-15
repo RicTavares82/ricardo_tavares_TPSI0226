@@ -11,8 +11,6 @@
 # •	Se uma palavra for prefixo da outra (como "casa" e "casamento"), a mais curta deve vir primeiro.
 
 
-lista = ["olhos", "zeca", "abrir", "olaria"]
-
 listaLetras = [
     "a",
     "b",
@@ -70,28 +68,20 @@ listaASCII = [
     121,
     122,
 ]
+# lista = ["banana", "uva", "abacaxi", "laranja"]
+# ["abacaxi", "banana", "laranja", "uva"]
 
-conta = 0
-while True:
-    palavra1 = lista[conta]
-    palavra2 = lista[conta + 1]
+lista = ["banana", "laranja", "casamento", "casa"]
 
-    for i in range(len(palavra1)):
-        conta2 = 0
+flag = True
+print(lista)
 
-        if palavra1[i] > palavra2[i]:
-            lista[conta], lista[conta + 1] = lista[conta + 1], lista[conta]
-            conta += 1
-            break
-        elif palavra2[i] < palavra1[i]:
-            conta += 1
-            break
-        else:
-            if
-            for letra2 in palavra2:
-                if palavra2[i] > palavra1[i]:
-                    lista[conta], lista[conta + 1] = lista[conta + 1], lista[conta]
-                else:
-                    conta2 += 1
-
-
+while flag:
+    flag = False
+    print(lista)
+    for i in range(len(lista) - 1):
+        if lista[i] > lista[i + 1]:
+            lista[i], lista[i + 1] = lista[i + 1], lista[i]
+            print(lista)
+            flag = True
+print("Lista ordenada:", lista)

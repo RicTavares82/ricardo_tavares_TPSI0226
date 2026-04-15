@@ -407,16 +407,58 @@
 # -----
 
 # try:
-#     value= int (input('Insira um número natural:')) 
-#     print('O recíproco de', value, 'é', 1 / value) 
+#     value= int (input('Insira um número natural:'))
+#     print('O recíproco de', value, 'é', 1 / value)
 # except:0
 #     print('Não sei o que fazer.')
 
-#----
-try:
-    value = int(input('Digite um número natural: '))
-    print('O recíproco de', value, 'é', 1/value)
-except ValueError:
-    print('Eu não sei o que fazer.') 
-except ZeroDivisionError:
-    print('A divisão por zero não é permitida em nosso Universo.') 
+# ----
+# try:
+#     value = int(input('Digite um número natural: '))
+#     print('O recíproco de', value, 'é', 1/value)
+# except ValueError:
+#     print('Eu não sei o que fazer.')
+# except ZeroDivisionError:
+#     print('A divisão por zero não é permitida em nosso Universo.')
+
+# try:
+#     print(10 / 0)
+#     break
+# except ZeroDivisionError:
+#     print("Ocorreu um erro de divisão por zero...")
+# except (ValueError, TypeError):
+#     print("Ocorreu um erro de valor ou tipo...")
+# except:
+#     print("Ocorreu um erro desconhecido...")
+
+
+# school_class = {}
+
+# while True:
+#     name = input("Digite o nome do aluno (ou Enter para sair): ")
+#     if name == "":
+#         break
+
+#     try:
+#         score = int(input(f"Insira a pontuação para {name} (0-10): "))
+#         if score not in range(0, 11):
+#             print("Nota inválida! Use valores de 0 a 10.")
+#             continue
+
+#         # Usando LISTA para guardar as várias notas
+#         if name in school_class:
+#             school_class[name].append(score)
+#         else:
+#             school_class[name] = [score]
+
+#     except ValueError:
+#         print("Por favor, digite um número inteiro.")
+
+# print("\n--- MÉDIAS FINAIS ---")
+# # O sorted() organiza os nomes por ordem alfabética
+# for name in sorted(school_class.keys()):
+#     notas = school_class[name]
+#     media = sum(notas) / len(notas)
+#     print(f"{name}: {media:.2f}")
+
+
