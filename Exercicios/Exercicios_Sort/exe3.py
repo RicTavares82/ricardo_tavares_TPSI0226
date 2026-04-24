@@ -9,3 +9,17 @@
 # •	Ordena os caracteres com base no valor de ord().
 # •	Junta novamente numa string.
 # Este exercício é útil para aprender como a ordenação funciona mesmo a nível de caracteres, não só de palavras inteiras.
+
+
+palavra = "algoritmo"
+# print("antes: ", palavra)
+
+caracteres = list(palavra)
+
+caracteres.sort()
+
+# print("durante : ", caracteres)
+
+palavra = "".join(caracteres)
+
+print("depois : ", palavra)
