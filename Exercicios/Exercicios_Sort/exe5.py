@@ -25,4 +25,6 @@ for i in range(len(lista)):
     else:
         dic[primeiraLetra].append(lista[i])
 
-print(dic)
+# print(dic)
+for cada in dic.keys():
+    print(cada, dic)
