@@ -462,3 +462,9 @@
 #     print(f"{name}: {media:.2f}")
 
 
+def factorial_function(n):
+    if n < 0:
+        return None
+    if n < 2:
+        return 1
+    return n * factorial_function(n - 1)

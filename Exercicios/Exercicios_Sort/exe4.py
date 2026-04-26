@@ -13,7 +13,7 @@
 def contar_minusculas(palavra):
     contador = 0
     for letra in palavra:
-        # Verifica se a letra está entre 'a' e 'z' (ASCII)
+        # Verificar se a letra está entre 'a' e 'z' (ASCII)
         if "a" <= letra <= "z":
             contador += 1
     return contador
