@@ -21,3 +21,33 @@
 # 3.	Manter os espaços, acentos e distinguir entre maiúsculas e minúsculas.
 # 4.	Impede que a chave seja vazia.
 # 5.	Aplica rotação aos caracteres da mensagem encriptada (entre ASCII 32 e 126), para mantê-los dentro deste intervalo.
+
+
+chave = input("Digita a chave para criptografia (não pode ser vazia): ")
+while not chave:
+    print("A chave não pode ser vazia. Por favor, digita uma chave válida.")
+    chave = input("Digita a chave para criptografia (não pode ser vazia): ")
+
+
+def menu():
+    flag = True
+    while flag:
+        print("\nMenu:")
+        print("1. Criptografar mensagem")
+        print("2. Descriptografar mensagem")
+        print("3. Sair")
+        escolha = input("Escolha uma opção: ")
+        if "1" < escolha > "3":
+            print("\nopção errada. Tenta outra vez")
+        else:
+            flag = False
+        return escolha
+
+
+flag = True
+while flag:
+    escolha = menu()
+    print(escolha)
+    if escolha == "3":
+        print("\nA sair da app")
+        break
