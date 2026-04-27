@@ -28,7 +28,14 @@ while not chave:
     print("A chave não pode ser vazia. Por favor, digita uma chave válida.")
     chave = input("Digita a chave para criptografia (não pode ser vazia): ")
 
+valorChave = 0
+for i in range(len(chave)):
+    valorLetraChave = ord(chave[i])
+    valorChave += valorLetraChave
+print(valorChave)
 
+
+# Função para o menu
 def menu():
     flag = True
     while flag:
@@ -44,10 +51,39 @@ def menu():
         return escolha
 
 
+# Função para criptografar
+def criptografar(chave):
+    listaMensagemCrip = []
+    soma = 0
+    listaInvertida = []
+    mensagem = input("Escreva a mensagem a criptografar: ")
+    for i in range(len(mensagem)):
+        valorLetraMensagem = ord(mensagem[i])
+        soma = valorLetraMensagem + valorChave
+        valor_rotacionado = ((soma - 32) % 95) + 32
+        listaMensagemCrip.append(valor_rotacionado)
+    for y in range(len(mensagem)):
+        listaInvertida = chr(listaMensagemCrip)
+        listaString = "".join(listaInvertida)
+    print(listaInvertida)
+
+    # print(listaMensagem)
+    return listaMensagemCrip
+
+
+# Funão para descriptografar
+def descriptografar():
+    pass
+
+
 flag = True
 while flag:
     escolha = menu()
     print(escolha)
+    if escolha == "1":
+        guardarMenCrip = criptografar(valorChave)
+        print("a mensagem tem o valor de :", guardarMenCrip)
+
     if escolha == "3":
         print("\nA sair da app")
         break
