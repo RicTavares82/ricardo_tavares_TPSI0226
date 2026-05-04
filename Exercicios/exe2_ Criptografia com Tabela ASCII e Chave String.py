@@ -54,19 +54,29 @@ def menu():
 # Função para criptografar
 def criptografar(chave):
     listaMensagemCrip = []
-    soma = 0
+    valorLetraMensagem = []
+    valor_rotacionado = []
     listaInvertida = []
+    # listaString = ""
+
     mensagem = input("Escreva a mensagem a criptografar: ")
     for i in range(len(mensagem)):
-        valorLetraMensagem = ord(mensagem[i])
-        soma = valorLetraMensagem + valorChave
-        valor_rotacionado = ((soma - 32) % 95) + 32
-        listaMensagemCrip.append(valor_rotacionado)
-    for y in range(len(mensagem)):
-        listaInvertida = chr(listaMensagemCrip)
-        listaString = "".join(listaInvertida)
+        valorLetraMensagem.append(ord(mensagem[i]) + chave)
+        valor_rotacionado.append(((valorLetraMensagem[i] - 32) % 95) + 32)
+        listaInvertida.append(chr(valor_rotacionado[i]))
+
+    print(listaInvertida)
+    print(valorLetraMensagem)
+    print(valor_rotacionado)
+    "".join(listaInvertida)
     print(listaInvertida)
 
+    #     soma = valorLetraMensagem + chave
+    #     listaMensagemCrip.append(valor_rotacionado)ric
+    # for y in range(len(mensagem)):
+    #     listaInvertida = chr(listaMensagemCrip)
+    #     listaString = "".join(listaInvertida)
+    # print(listaInvertida)
     # print(listaMensagem)
     return listaMensagemCrip
 
@@ -82,7 +92,7 @@ while flag:
     print(escolha)
     if escolha == "1":
         guardarMenCrip = criptografar(valorChave)
-        print("a mensagem tem o valor de :", guardarMenCrip)
+        # print("a mensagem tem o valor de :", listaMensagemCrip)
 
     if escolha == "3":
         print("\nA sair da app")
